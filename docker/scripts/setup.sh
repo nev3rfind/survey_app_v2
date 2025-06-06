@@ -38,7 +38,7 @@ docker-compose exec php php artisan view:cache
 
 echo "📦 Installing Node.js dependencies and building assets..."
 docker-compose exec node npm install
-docker-compose exec node npm run production
+docker-compose exec node npm run dev
 
 echo "✅ Setup complete!"
 echo ""
@@ -50,6 +50,9 @@ echo ""
 echo "📋 Useful commands:"
 echo "  - View logs: docker-compose logs -f"
 echo "  - Access PHP container: docker-compose exec php bash"
+echo "  - Access Node container: docker-compose exec node sh"
 echo "  - Run artisan commands: docker-compose exec php php artisan [command]"
+echo "  - Build assets: docker-compose exec node npm run dev"
+echo "  - Watch assets: docker-compose exec node npm run watch"
 echo "  - Stop containers: docker-compose down"
 echo "  - Restart containers: docker-compose restart"
